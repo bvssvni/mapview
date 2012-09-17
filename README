@@ -1,0 +1,21 @@
+
+Mapview - C library for dealing with 2D views of map coordinates.
+BSD license.
+by Sven Nilsen, 2012
+http://www.cutoutpro.com
+
+Version: 0.000 in angular degrees version notation
+http://isprogrammingeasy.blogspot.no/2012/08/angular-degrees-versioning-notation.html
+
+As a pragmatric programmer, this library is written to solve _my_ problems and not yours.
+
+Dealing with 2D views in games seems first to be a trivial task,
+but certain things are hard to keep remembering.
+
+For example, how to you calculate a view that contain the entire map by fixed ratio?
+How do you create a general function for splitting a screen view into more parts?
+
+See 'mapview.h' for complete documentation.
+
+The file 'mapview-test.c' does unit tests.
+
