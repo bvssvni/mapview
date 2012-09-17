@@ -7,7 +7,7 @@ http://www.cutoutpro.com
 Version: 0.000 in angular degrees version notation
 http://isprogrammingeasy.blogspot.no/2012/08/angular-degrees-versioning-notation.html
 
-As a pragmatric programmer, this library is written to solve _my_ problems and not yours.
+As a pragmatic programmer, this library is written to solve _my_ problems and not yours.
 
 Dealing with 2D views in games seems first to be a trivial task,
 but certain things are hard to keep remembering.

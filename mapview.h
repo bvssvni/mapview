@@ -39,6 +39,15 @@ typedef struct mapview
 	int vx, vy, vw, vh;
 } mapview;
 
+/*
+A combination of directions can be set by adding them together.
+
+	// Top left direction.
+	mapview_direction d = MAPVIEW_TOP + MAPVIEW_LEFT;
+
+	// Alternative notion.
+	mapview_direction d = MAPVIEW_TOP | MAPVIEW_LEFT;
+*/
 typedef enum mapview_direction
 {
 	MAPVIEW_CENTER = 1,
@@ -58,6 +67,11 @@ mapview mapview_inside(const mapview *mapview);
 Returns a view that is centered on the map.
 */
 mapview mapview_center(const mapview *mapview);
+
+/*
+Returns a view that moves by setting a combination of directions.
+*/
+mapview mapview_corner(const mapview *view, mapview_direction d);
 
 /*
 Swaps the view with the map coordinates.

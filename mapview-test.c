@@ -97,6 +97,17 @@ void test(void)
 		if (b.vw != 200) Err();
 		if (b.vh != 400) Err();
 	}
+	{
+		mapview a = {.w = 200, .h = 100, .vw = 4, .vh = 8};
+		mapview b = mapview_corner(&a, MAPVIEW_TOP);
+		if (b.vy != 0) Err();
+		b = mapview_corner(&a, MAPVIEW_LEFT);
+		if (b.vx != 0) Err();
+		b = mapview_corner(&a, MAPVIEW_RIGHT);
+		if (b.vx != 196) Err();
+		b = mapview_corner(&a, MAPVIEW_BOTTOM);
+		if (b.vy != 92) Err();
+	}
 }
 
 int main(int argc, char *argv[])

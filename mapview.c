@@ -20,6 +20,16 @@ mapview mapview_center(const mapview *view)
 	return m;
 }
 
+mapview mapview_corner(const mapview *view, mapview_direction d)
+{
+	mapview m = *view;
+	if ((d&MAPVIEW_LEFT) == MAPVIEW_LEFT) m.vx = m.x;
+	if ((d&MAPVIEW_TOP) == MAPVIEW_TOP) m.vy = m.y;
+	if ((d&MAPVIEW_RIGHT) == MAPVIEW_RIGHT) m.vx = m.x+m.w-m.vw;
+	if ((d&MAPVIEW_BOTTOM) == MAPVIEW_BOTTOM) m.vy = m.y+m.h-m.vh;
+	return m;
+}
+
 mapview_direction mapview_check_direction(const mapview *m)
 {
 	mapview_direction d = 0;
